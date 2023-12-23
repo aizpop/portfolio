@@ -1,7 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 .App {
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  width: auto;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
 }
 
+.BackgroundVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.Content {
+  position: relative;
+  z-index: 1; /* Ensure the content is above the video */
+}
+
+
+.SideNav{
+  position: fixed;
+  top: 20%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: none;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: width 0.3s ease-in-out;
+  z-index: 2;
+}
+
+.text {
+  overflow: hidden;
+  white-space: nowrap;
+  color: white;
+}
+
+.SideNav:hover .text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Side Nav button */
+.NavButton {
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  border-radius: 50%; /* Make the button circular */
+  width: 50px; /* Set the desired width and height */
+  height: 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow effect */
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; 
+}
+
+.NavButton:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Adjust shadow on hover */
+  transform: translateX(-10px); /* Slide the button to the left on hover */
+}
+
+.NavButton .icon {
+  color: #fff;
+  height: 15px;
+  width: 15px;
+}
+
+.NavButton .text {
+  display: none; /* Hide the text initially */
+  position: absolute;
+  right: 100%; /* Position the text to the left of the button */
+  transform: translate(-50%, -50%);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  margin-right: 10px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.NavButton:hover .text {
+  display: inline-block; /* Show the text on hover */
+  color: #fff;
+  opacity: 1;
+  font-size: 1.2rem;
+  transform: translateX(-10px);
+  font-weight: 500;
+}
+
+/* Adjust the styling for the icon to ensure it's centered */
+.NavButton .icon {
+  display: inline-block;
+  vertical-align: middle; /* Align the icon vertically in the middle */
+}
+
+.ProfileContainer {
+  position: fixed;
+  top: 51%;
+  left: 8%; /* Adjust the left distance as needed */
+  transform: translateY(-50%);
+}
+
+.ProfileImage {
+  border-radius: 50%; /* Make it circular if desired */
+  width: 300px; /* Set the desired width */
+  height: 300px; /* Set the desired height */
+  object-fit: cover;
+  margin-bottom: 10px; /* Adjust spacing if needed */
+  background-color: #151515;
+}
+
+.TextContainer {
+  position: fixed;
+  top: 50%;
+  left: 35%; /* Adjust the left distance as needed */
+  transform: translateY(-50%);
+  text-align: left;
+  margin: 0;
+}
+
+.TextContainer p {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  font-weight: lighter;
+  font-size: 40px;
+  margin-bottom: 0;
+}
+
+.TextContainer span.animate {
+  animation: typing 3s steps(40, end) infinite, blink-caret 0.75s step-end infinite;
+}
+
+
+.TextContainer span {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 0.15em solid #ff5c00; /* Adjust the color and size of the cursor */
+  white-space: nowrap;
+  margin: 0;
+  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+  color: #fff;
+  font-size: 70px;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ff5c00; /* Adjust the color of the cursor */
+  }
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
