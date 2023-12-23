@@ -209,9 +209,6 @@ li {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
 @keyframes App-logo-spin {
   from {
@@ -224,27 +221,26 @@ li {
 /* Media query for mobile devices */
 @media (max-width: 768px) {
   .TextContainer {
-    left: 10%; /* Adjust the left distance for smaller screens */
-    top: 65%;
+    left: 35%; /* Adjust the left distance for smaller screens */
+    top: 50%;
   }
   
   .ProfileContainer {
-    left: 50%; /* Adjust the left distance for smaller screens */
-    transform: translateX(-50%);
-    top: 40%;
+    left: 5%; /* Adjust the left distance for smaller screens */
+    transform: translateY(-50%);
   }
 
   .ProfileImage {
-    width: 150px; /* Adjust the width for smaller screens */
-    height: 150px; /* Adjust the height for smaller screens */
-    
+    width: 100px; /* Adjust the width for smaller screens */
+    height: 100px; /* Adjust the height for smaller screens */
+    margin-right: 10px; /* Add margin for spacing */
   }
 
   .TextContainer p {
-    font-size: 24px; /* Adjust the font size for smaller screens */
+    font-size: 20px; /* Adjust the font size for smaller screens */
   }
 
   .TextContainer span {
-    font-size: 40px; /* Adjust the font size for smaller screens */
+    font-size: 35px; /* Adjust the font size for smaller screens */
   }
 }
