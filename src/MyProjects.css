@@ -1,0 +1,15 @@
+.ProjectContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Adjust as needed */
+    width: 100vw;
+    background-color: #181818;
+}
+
+.ProjectTitle {
+    color: #fff;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}

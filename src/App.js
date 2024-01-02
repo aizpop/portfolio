@@ -3,43 +3,23 @@ import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse, faUser, faFolder } from '@fortawesome/free-solid-svg-icons';
 import profileImage from './assets/img/Profile.png';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './Home';
+import AboutMe from './AboutMe';
+import MyProjects from './MyProjects';
+import Sidebar from './components/Sidebar';
 
 function App() {
   return (
-    <div className="App">
-      <div className="SideNav">
-        <ul>
-          <li>
-            <button className="NavButton">
-              <FontAwesomeIcon icon={faHouse} className="icon" />
-              <span className="text">Home</span>
-            </button>
-          </li>
-          <li>
-            <button className="NavButton">
-              <FontAwesomeIcon icon={faUser} className="icon" />
-              <span className="text">About Me</span>
-            </button>
-          </li>
-          <li>
-            <button className="NavButton">
-              <FontAwesomeIcon icon={faFolder} className="icon" />
-              <span className="text">My Projects</span>
-            </button>
-          </li>
-        </ul>
-      </div>
-      <div className="ProfileContainer">
-        <img src={profileImage} alt="Profile" className="ProfileImage" />
-      </div>
-      <div className="TextContainer">
-        <p>Airah Baculo</p>
-        <span>UX Designer</span>
-      </div>
-      <video autoPlay muted loop className="BackgroundVideo">
-        <source src={require('./assets/mp4/Background.mp4')} type="video/mp4" />
-      </video>
-    </div>
+    <BrowserRouter>
+      <Sidebar>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/about" element={<AboutMe/>}/>
+          <Route path="/projects" element={<MyProjects/>}/>
+        </Routes>
+      </Sidebar>
+    </BrowserRouter>
   );
 }
 

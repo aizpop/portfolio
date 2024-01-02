@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #181818;
+    width: 100vw;
+    height: 100vh;
+    top: 10%;
+    text-align: start;
+}
+
+.top {
+    height: 30%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Animation {
+    position: fixed;
+    top: 2%;
+    left: 2%;
+    height: 30%;
+    z-index: 1;
+}
+
+.ProfileContainerAbout {
+    position: fixed;
+    top: 17%;
+    left: 2.7%;
+    transform: translateY(-50%);
+    background-color: #181818;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    z-index: 2;
+}
+
+.ProfileImagAbout {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    z-index: 3;
+}
+
+.top p {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 20%;
+    font-size: 24px;
+    font-weight: 200;
+    align-items: center;
+}
+.BodyContainer {
+    display: flex;
+    margin-top: 3%;
+}
+.LeftContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 0.4;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.RightContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 0.6;
+    margin-left: 0px;
+    margin-right: 20px;
+}
+
+.PersonalDetailsContainerLeft {
+    display: flex;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid #ccc;
+    color: #fff;
+}
+.PersonalDetailsContainerRight {
+    display: flex;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid #ccc;
+    color: #fff;
+}
+
+.label {
+    margin: 20px;
+}
+
+.hr {
+    border-bottom: 1px solid #ccc;
+    border: none;
+}
+
+.LeftColumn {
+    flex: 0.3;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.RightColumn {
+    flex: 0.7;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.LeftColumn h3 {
+    margin: 20px 0;
+}
+
+.RightColumn p {
+    margin: 10px 0;
+}
+
+.bodyContainer {
+    display: flex;
+    margin-top: 2%;
+}
+
+.leftSide,
+.rightSide {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: center;
+    /* justify-content: center;  */
+    background-color: none; /* Adjust background color if needed */
+}
+
+.leftSide {
+    background-color: none;
+
+}
+  
+.rightSide {
+    background-color: none;
+
+}
+
+.tableOne {
+    width: 90%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid #ccc;
+
+}
+.table {
+    width: 50%;
+    margin-left: 20%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    background-color: transparent;
+    border: none;
+
+}
+.space {
+    padding: 10px;
+    padding-left: 0px;
+}
+
+.LabelName {
+    vertical-align: top;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    color: #fff;
+}
+
+th {
+    background-color: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.label {
+    font-weight: bold;
+}
+
+/* Optional: Add hover effect */
+tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+  
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-side,
+    .right-side {
+        width: 100%;
+    }
+}
